@@ -1,13 +1,18 @@
 
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
+import { Home, Product, ProductItem, About } from './components'
+
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 const RouterConfig = () => {
   return (
     <div>
-      <h1>this is Router</h1>
       <BrowserRouter>
         <Switch>
-          <Route path='/' component={ } />
+          <Route exact path='/' component={Home} />
+          <Route path='/about' component={About} />
+          <Route exact path='/product' component={Product} />
+          <Route path='/product/:id' component={ProductItem} />
+          <Route path='*' component={() => <h2>404 not found</h2>} />
         </Switch>
       </BrowserRouter>
     </div>
