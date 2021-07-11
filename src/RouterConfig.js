@@ -1,5 +1,5 @@
 
-import { Home, Product, ProductItem, About } from './components'
+import { Home, Product, ProductItem, About, Navbar } from './components'
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
@@ -7,6 +7,7 @@ const RouterConfig = () => {
   return (
     <div>
       <BrowserRouter>
+        <Navbar />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/about' component={About} />
